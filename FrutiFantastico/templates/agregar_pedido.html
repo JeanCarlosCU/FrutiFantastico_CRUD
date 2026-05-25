@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Pedido | FrutiFantastico</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#85f074,#0b8700);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .contenedor{
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            width:400px;
+            text-align:center;
+            box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#0b8700;
+            margin-bottom:25px;
+        }
+
+        select,
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            border:none;
+            border-radius:10px;
+            background:#f2f2f2;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:20px;
+            border:none;
+            border-radius:10px;
+            background:#0b8700;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#004912;
+        }
+
+        a{
+            text-decoration:none;
+            color:#0b8700;
+            font-weight:bold;
+        }
+
+        p{
+            color:green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Agregar Pedido</h1>
+
+        <form method="POST">
+
+            <select name="cliente" required>
+
+                <option value="">
+                    Selecciona un cliente
+                </option>
+
+                {% for cliente in clientes %}
+
+                <option value="{{ cliente.nombre }}">
+
+                    {{ cliente.nombre }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <select name="producto" required>
+
+                <option value="">
+                    Selecciona un producto
+                </option>
+
+                {% for producto in productos %}
+
+                <option value="{{ producto.nombre }}">
+
+                    {{ producto.nombre }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <input
+            type="number"
+            name="cantidad"
+            placeholder="Cantidad"
+            required
+            >
+
+            <select name="estado">
+
+                <option value="Pendiente">
+                    Pendiente
+                </option>
+
+                <option value="Entregado">
+                    Entregado
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Guardar Pedido
+            </button>
+
+        </form>
+
+        <p>{{ mensaje }}</p>
+
+        <br>
+
+        <a href="/dashboard">
+            Volver al dashboard
+        </a>
+
+    </div>
+
+</body>
+
+</html>
