@@ -9,7 +9,7 @@
 
 #### El codigo ahora tiene registro e inicio de sesion junto con una recuperacion de contraseña por si el usuario olvida la contraseña.
 
-#### El codigo ahora tiene un registro de los alimentos para cuando se hace un pedido marcarlo como pendiente y ya entregado tiene su opcion para informar que el pedido ya ha sido entregado, tambien trae 3 diferentes para seleccionar a cual de ellas se entregara y tambien trae la opcion para ingresas cuantas piezas de cada fruta necesitan y de cual de ellas necesita.
+#### El codigo ahora tiene un registro de los alimentos para cuando se hace un pedido marcarlo como pendiente y ya entregado tiene su opcion para informar que el pedido ya ha sido entregado, tambien trae 3 diferentes para seleccionar a cual de ellas se entregara y tambien trae la opcion para ingresas cuantas piezas de cada fruta necesitan y de cual de ellas necesita, aparte de todo eso tambien cuenta con 3 opciones nuevas las cuales te permiten agregar un nuevo producto, cliente o pedido, lo cual hace que esto haga todo de forma mas eficiente.
 
 #### Nota: El codigo se corre con uv run app.py
 
