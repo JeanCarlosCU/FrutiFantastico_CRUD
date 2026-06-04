@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#85f074,#0b8700);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .contenedor{
+            width:400px;
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align:center;
+            color:#0b8700;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            border:none;
+            border-radius:10px;
+            background:#f2f2f2;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            margin-top:20px;
+            border:none;
+            border-radius:10px;
+            background:#0b8700;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#004912;
+        }
+
+        p{
+            text-align:center;
+            color:green;
+        }
+
+        a{
+            display:block;
+            text-align:center;
+            margin-top:20px;
+            text-decoration:none;
+            color:#0b8700;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Agregar Producto</h1>
+
+        <form method="POST">
+
+            <input
+            type="text"
+            name="nombre"
+            placeholder="Nombre del producto"
+            required
+            >
+
+            <input
+            type="text"
+            name="categoria"
+            placeholder="Categoría"
+            required
+            >
+
+            <input
+            type="number"
+            name="stock"
+            placeholder="Stock"
+            required
+            >
+
+            <button type="submit">
+                Guardar Producto
+            </button>
+
+        </form>
+
+        <p>{{ mensaje }}</p>
+
+        <a href="/dashboard">
+            Volver al dashboard
+        </a>
+
+    </div>
+
+</body>
+
+</html>
